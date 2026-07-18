@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+
+@theme{
+    --color-nivara-blue: #3b82f6;
+    --color-nivara-neon: #22c55e;
+}

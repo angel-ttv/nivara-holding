@@ -1,0 +1,37 @@
+---
+interface Props {
+    // Definimos las props EXACTAMENTE como vienen en tus datos
+    nombre: string;
+    rol: string;          // Antes era 'cargo'
+    especialidad: string; // Antes era 'frase' o 'descripcion'
+    avatar?: string;      // Antes era 'foto' o 'icono'
+}
+
+const { nombre, rol, especialidad, avatar } = Astro.props;
+---
+
+<div class="group flex flex-col items-center p-6 rounded-2xl text-center transition-all duration-300 hover:-translate-y-2
+    bg-white dark:bg-slate-800
+    border border-slate-200 dark:border-slate-700
+    shadow-md hover:shadow-xl dark:shadow-none dark:hover:bg-slate-700/50">
+    
+    <div class="w-24 h-24 rounded-full bg-slate-100 dark:bg-slate-900 flex items-center justify-center mb-5 text-4xl shadow-inner group-hover:scale-110 transition-transform duration-300 ring-4 ring-transparent group-hover:ring-cyan-400/30 overflow-hidden">
+        {avatar?.startsWith('http') || avatar?.startsWith('/') ? (
+            <img src={avatar} alt={nombre} class="w-full h-full object-cover" />
+        ) : (
+            <span>{avatar || "👤"}</span>
+        )}
+    </div>
+
+    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-1">
+        {nombre}
+    </h3>
+    
+    <p class="text-xs font-bold tracking-wider uppercase text-cyan-600 dark:text-cyan-400 mb-3">
+        {rol}
+    </p>
+
+    <p class="text-sm italic text-slate-500 dark:text-slate-400 leading-relaxed">
+        "{especialidad}"
+    </p>
+</div>

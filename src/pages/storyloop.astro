@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/ui/Navbar.astro';
+import Footer from '../components/ui/Footer.astro';
+---
+
+<Layout title="Descargar Storyloop | Beta Cerrada">
+  <Navbar />
+  
+  <main class="max-w-3xl mx-auto px-4 pt-40 pb-20 text-center">
+    
+    <header class="mb-16">
+      <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-yellow-400 to-amber-600 text-white text-4xl shadow-xl mb-6">
+        ✦
+      </div>
+      <h1 class="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-4">
+        Storyloop <span class="text-yellow-500">Beta</span>
+      </h1>
+      <p class="text-slate-600 dark:text-slate-400 text-lg max-w-xl mx-auto">
+        La red social literaria donde las palabras viven. <br/> Sé de los primeros en probarla.
+      </p>
+    </header>
+
+    <!-- 🟢 SECCIÓN DE DESCARGA -->
+    <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-2xl border border-slate-200 dark:border-slate-700 mb-12">
+      
+      <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">
+        📱 Descargar para Android
+      </h2>
+      <p class="text-slate-500 dark:text-slate-400 text-sm mb-8">
+        Versión 1.0 · Tamaño ~34 MB
+      </p>
+
+      <!-- BOTÓN DE DESCARGA -->
+      <!-- 🔄 REEMPLAZA EL ATRIBUTO 'href' CON TU ENLACE REAL DE DRIVE o GITHUB -->
+      <a 
+        href="https://TU-ENLACE-DE-DESCARGA-AQUI.com" 
+        target="_blank"
+        class="inline-block bg-black dark:bg-white text-white dark:text-black font-bold py-4 px-10 rounded-xl text-lg hover:scale-105 active:scale-95 transition-all shadow-lg"
+      >
+        Descargar APK
+      </a>
+
+      <!-- GUÍA DE INSTALACIÓN (Muy importante) -->
+      <div class="mt-10 text-left">
+        <h3 class="font-bold text-slate-800 dark:text-slate-200 mb-4 uppercase tracking-wider text-sm">
+          ⚙️ ¿Cómo instalar?
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-slate-100 dark:bg-slate-700 p-4 rounded-xl">
+            <span class="text-2xl font-black text-yellow-500">1</span>
+            <p class="text-sm mt-2 text-slate-600 dark:text-slate-300">
+              Al abrir el archivo, tu celular te pedirá permiso para <strong class="dark:text-white">"instalar apps desconocidas"</strong>. Actívalo para Chrome o Archivos.
+            </p>
+          </div>
+          <div class="bg-slate-100 dark:bg-slate-700 p-4 rounded-xl">
+            <span class="text-2xl font-black text-yellow-500">2</span>
+            <p class="text-sm mt-2 text-slate-600 dark:text-slate-300">
+              Una vez activado, vuelve atrás y toca de nuevo el archivo descargado. Presiona <strong class="dark:text-white">"Instalar"</strong>.
+            </p>
+          </div>
+          <div class="bg-slate-100 dark:bg-slate-700 p-4 rounded-xl">
+            <span class="text-2xl font-black text-yellow-500">3</span>
+            <p class="text-sm mt-2 text-slate-600 dark:text-slate-300">
+              ¡Listo! Abre Storyloop, regístrate y comienza a escribir. Recuerda: es una beta, ¡tus comentarios nos ayudan a mejorar!
+            </p>
+          </div>
+        </div>
+        <div class="mt-6 p-3 bg-yellow-50 dark:bg-slate-700/50 border border-yellow-200 dark:border-slate-600 rounded-xl text-xs text-slate-600 dark:text-slate-300">
+          <strong>¿Te aparece "App no instalada"?</strong> Es posible que necesites la versión para tu tipo de procesador. Si el botón de arriba no funciona, <a href="/descargas" class="underline font-bold">descarga la versión correcta aquí</a>.
+        </div>
+      </div>
+    </div>
+
+    <!-- NOTA DE PRIVACIDAD -->
+    <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-2xl border border-slate-200 dark:border-slate-700">
+      <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">
+        🔒 Tu privacidad es sagrada
+      </h2>
+      <p class="text-slate-500 dark:text-slate-400 text-sm">
+        Esta versión de prueba usa Firebase seguro. <br/> Tus historias, tus datos y tus mensajes están protegidos con cifrado de extremo a extremo, incluso en esta beta.
+      </p>
+    </div>
+
+  </main>
+
+  <Footer />
+</Layout>

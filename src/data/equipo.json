@@ -1,0 +1,32 @@
+[
+  {
+    "nombre": "Ángel",
+    "rol": "CEO & Director Creativo",
+    "especialidad": "Visión, IA y Desarrollo de Software.",
+    "avatar": "🚀"
+  },
+  {
+    "nombre": "Stefany",
+    "rol": "COO - Directora de Operaciones",
+    "especialidad": "Gestión, Administración tienda online y Filtro Operativo.",
+    "avatar": "📊"
+  },
+  {
+    "nombre": "Alonso",
+    "rol": "CMO - Director de Marketing",
+    "especialidad": "Diseño Gráfico y Planeación de Campañas.",
+    "avatar": "🎨"
+  },
+  {
+    "nombre": "Job",
+    "rol": "CSO - Director de Ventas",
+    "especialidad": "Relaciones Públicas y Clientes de Alto Valor.",
+    "avatar": "💼"
+  },
+  {
+    "nombre": "Erwin",
+    "rol": "Director de Soporte / CS",
+    "especialidad": "Atención al Cliente y Community Manager Táctico.",
+    "avatar": "🎧"
+  }
+]

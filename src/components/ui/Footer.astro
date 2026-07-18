@@ -1,0 +1,41 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="mt-32 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/50 pt-16 pb-8 transition-colors duration-500">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+      
+      <div class="text-center md:text-left">
+        <h2 class="text-2xl font-black tracking-tighter text-slate-900 dark:text-white uppercase mb-2">
+          NIVARA GROUP
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400 text-sm max-w-md">
+          Innovación, tecnología y comercio <br class="hidden md:block" /> desde el corazón de la Riviera Maya.
+        </p>
+      </div>
+
+      <div class="flex gap-6">
+        <a href="#" class="text-slate-500 hover:text-indigo-600 dark:text-slate-400 dark:hover:text-cyan-400 transition-colors text-sm font-bold uppercase tracking-wider">
+          LinkedIn
+        </a>
+        <a href="#" class="text-slate-500 hover:text-pink-600 dark:text-slate-400 dark:hover:text-cyan-400 transition-colors text-sm font-bold uppercase tracking-wider">
+          Instagram
+        </a>
+        <a href="mailto:contacto@nivara.com" class="px-4 py-2 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-white text-sm font-bold hover:scale-105 transition-transform">
+          Contacto
+        </a>
+      </div>
+    </div>
+
+    <div class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500 dark:text-slate-600">
+      <p>© {year} Nivara Holding. Todos los derechos reservados.</p>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-slate-800 dark:hover:text-slate-300">Privacidad</a>
+        <a href="#" class="hover:text-slate-800 dark:hover:text-slate-300">Términos</a>
+      </div>
+    </div>
+
+  </div>
+</footer>

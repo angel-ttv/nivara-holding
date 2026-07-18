@@ -1,0 +1,59 @@
+[
+  {
+    "id": "nivara-dev",
+    "nombre": "Nivara Dev",
+    "descripcion": "Agencia de Software: Apps, Juegos y Desarrollo Web de alto rendimiento.",
+    "icono": "💻",
+    "color": "#3b82f6",
+    "tag": "Tecnología"
+  },
+  {
+    "id": "tropigomitas",
+    "nombre": "Tropigomitas",
+    "descripcion": "Snacks y gomitas enchiladas con el sabor auténtico de la región.",
+    "icono": "🍬",
+    "color": "#ec4899",
+    "tag": "Comercio",
+    "url": "https://tropigomitas.netlify.app/index.html"
+  },
+  {
+    "id": "nivara-repairs",
+    "nombre": "Nivara Repairs",
+    "descripcion": "Expertos en microsoldadura y reparación de hardware especializado.",
+    "icono": "🔧",
+    "color": "#22c55e",
+    "tag": "Servicios"
+  },
+  {
+    "id": "nivara-marketing",
+    "nombre": "Nivara Marketing",
+    "descripcion": "Estrategias digitales y gestión de redes sociales para marcas modernas.",
+    "icono": "📢",
+    "color": "#a855f7",
+    "tag": "Marketing"
+  },
+  {
+    "id": "el-gran-tianguis",
+    "nombre": "El Gran Tianguis",
+    "descripcion": "Tu marketplace de confianza para comercio electrónico local y nacional.",
+    "icono": "🛒",
+    "color": "#f97316",
+    "tag": "E-commerce"
+  },
+  {
+    "id": "nivara-biotech",
+    "nombre": "Nivara Biotech",
+    "descripcion": "Innovación en biorreactores y soluciones biotecnológicas sostenibles.",
+    "icono": "🧬",
+    "color": "#10b981",
+    "tag": "I+D"
+  },
+  {
+    "id": "nivara-technology",
+    "nombre": "Nivara Technology",
+    "descripcion": "Investigación y desarrollo de hardware de vanguardia.",
+    "icono": "🤖",
+    "color": "#06b6d4",
+    "tag": "I+D"
+  }
+]

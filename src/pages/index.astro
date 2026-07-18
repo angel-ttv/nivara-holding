@@ -1,17 +1,99 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/ui/Navbar.astro'; 
+import Card from '../components/ui/Card.astro';
+import Member from '../components/ui/Member.astro'; /* Asegúrate que la ruta sea correcta */
+import Footer from '../components/ui/Footer.astro';
+import MisionVision from '../components/sections/MisionVision.astro';/* Revisa si lo guardaste en 'components' o 'components/sections' */
 
+// Datos (Json)
+import empresas from '../data/empresas.json';
+import equipo from '../data/equipo.json';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Nivara Holding | Hub de Innovación">
+  
+  <Navbar />
+  
+  <main class="max-w-6xl mx-auto px-4 pt-40 pb-20">
+    
+    <header class="text-center mb-24 reveal">
+      <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-6 bg-gradient-to-b from-slate-900 to-slate-500 dark:from-white dark:to-slate-500 bg-clip-text text-transparent uppercase">
+        NIVARA HOLDING
+      </h1>
+      <p class="text-slate-600 dark:text-slate-400 text-lg md:text-xl max-w-2xl mx-auto italic font-medium">
+        "Innovación, Tecnología y Comercio en el corazón de la Riviera Maya."
+      </p>
+    </header>
+  
+    <div class="reveal">
+        <h2 class="text-2xl font-bold mb-12 flex items-center gap-4 text-slate-400 dark:text-slate-500">
+            <span class="h-px flex-1 bg-slate-300 dark:bg-slate-800"></span>
+            NUESTRAS DIVISIONES
+            <span class="h-px flex-1 bg-slate-300 dark:bg-slate-800"></span>
+        </h2>
+
+        <section id="divisiones" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-32">
+        {empresas.map((emp) => (
+            <Card {...emp} />
+        ))}
+        </section>
+    </div>
+
+    <MisionVision />
+
+    <div class="reveal mt-32">
+        <h2 class="text-2xl font-bold mb-12 text-center uppercase tracking-widest text-cyan-400 dark:text-slate-500">
+            Board of Directors
+        </h2>
+
+        <section id="equipo" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        {
+            equipo && equipo.length > 0 ? (
+            equipo.map((persona) => (
+                <Member 
+                nombre={persona.nombre}
+                rol={persona.rol}
+                especialidad={persona.especialidad}
+                avatar={persona.avatar}
+                />
+            ))
+            ) : (
+            <p class="text-red-500 col-span-full text-center">Error: No se cargaron los datos del equipo.</p>
+            )
+        }
+        </section>
+    </div>
+
+  </main>
+
+  <Footer />
+
+  <script>
+    function setupObserver() {
+        const observerOptions = {
+            threshold: 0.1, // Se activa al ver el 10% del elemento
+            rootMargin: "0px 0px -50px 0px" // Un pequeño margen para que no aparezca tan abajo
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                    // Opcional: Dejar de observar una vez que ya apareció
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    }
+
+    // Ejecutar al cargar
+    setupObserver();
+    
+    // Ejecutar si usas transiciones de página de Astro
+    document.addEventListener('astro:after-swap', setupObserver);
+  </script>
+
+</Layout>

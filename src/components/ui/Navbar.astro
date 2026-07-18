@@ -1,0 +1,60 @@
+---
+// Ya no necesitamos importar ThemeToggle
+---
+<nav class="fixed top-0 left-0 right-0 z-50 flex justify-center p-4">
+  <div class="w-full max-w-6xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200 dark:border-slate-800 px-6 py-3 rounded-2xl flex justify-between items-center shadow-xl transition-all duration-500">
+    
+    <button id="logo-theme-toggle" class="flex items-center gap-3 group cursor-pointer border-none bg-transparent p-0 outline-none">
+      <div class="relative w-10 h-10">
+        <img src="/logo-dark.svg" alt="Nivara Logo Dark" class="w-10 h-10 absolute inset-0 hidden dark:block group-hover:rotate-12 transition-transform duration-300" />
+        <img src="/logo-light.svg" alt="Nivara Logo Light" class="w-10 h-10 absolute inset-0 block dark:hidden group-hover:rotate-12 transition-transform duration-300" />
+      </div>
+      <span class="font-bold text-slate-900 dark:text-white uppercase tracking-tighter text-xl">
+        Nivara
+      </span>
+    </button>
+
+    <div class="flex items-center gap-8">
+      <div class="hidden md:flex gap-8">
+        <a href="#divisiones" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white transition-colors">
+          Divisiones
+        </a>
+        <a href="#equipo" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-black dark:hover:text-white transition-colors">
+          Equipo
+        </a>
+      </div>
+      
+      <a href="https://wa.me/tu-numero" target="_blank" class="bg-slate-950 dark:bg-white text-white dark:text-black px-5 py-2.5 rounded-xl text-sm font-bold shadow-lg hover:scale-105 active:scale-95 transition-all">
+        Contacto
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const setupLogoToggle = () => {
+    const btn = document.getElementById("logo-theme-toggle");
+    
+    if (btn) {
+      // Truco: Clonamos el botón y lo reemplazamos para eliminar cualquier evento anterior
+      // Esto evita que se acumulen clics si navegas entre páginas
+      const newBtn = btn.cloneNode(true) as HTMLElement;
+      btn.parentNode?.replaceChild(newBtn, btn);
+      
+      // SOLUCIÓN DEL ERROR:
+      // Ahora validamos que 'newBtn' exista antes de usarlo
+      if (newBtn) {
+        newBtn.addEventListener("click", () => {
+          const isDark = document.documentElement.classList.toggle("dark");
+          localStorage.setItem("theme", isDark ? "dark" : "light");
+        });
+      }
+    }
+  };
+
+  // Inicializar
+  setupLogoToggle();
+  
+  // Reiniciar si se navega entre páginas (Astro View Transitions)
+  document.addEventListener('astro:after-swap', setupLogoToggle);
+</script>

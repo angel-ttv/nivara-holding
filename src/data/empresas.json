@@ -8,13 +8,21 @@
     "tag": "Tecnología"
   },
   {
-    "id": "tropigomitas",
-    "nombre": "Tropigomitas",
-    "descripcion": "Snacks y gomitas enchiladas con el sabor auténtico de la región.",
-    "icono": "🍬",
-    "color": "#ec4899",
-    "tag": "Comercio",
-    "url": "https://tropigomitas.netlify.app/index.html"
+    "id": "storyloop",
+    "nombre": "Storyloop",
+    "descripcion": "Red social para escritores y lectores: publica, lee y gana Tinta con tu obra.",
+    "icono": "📚",
+    "color": "#8b5cf6",
+    "tag": "Tecnología",
+    "url": "https://storyloop.com.mx"
+  },
+  {
+    "id": "papeleria-nivara",
+    "nombre": "Papelería Nivara",
+    "descripcion": "Papelería y útiles para estudiantes y negocios de la Riviera Maya.",
+    "icono": "✏️",
+    "color": "#f59e0b",
+    "tag": "Comercio"
   },
   {
     "id": "nivara-repairs",

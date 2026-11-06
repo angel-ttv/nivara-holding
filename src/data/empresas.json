@@ -23,21 +23,5 @@
     "icono": "📢",
     "color": "#a855f7",
     "tag": "Marketing"
-  },
-  {
-    "id": "el-gran-tianguis",
-    "nombre": "El Gran Tianguis",
-    "descripcion": "Tu marketplace de confianza para comercio electrónico local y nacional.",
-    "icono": "🛒",
-    "color": "#f97316",
-    "tag": "E-commerce"
-  },
-  {
-    "id": "nivara-technology",
-    "nombre": "Nivara Technology",
-    "descripcion": "Investigación y desarrollo de hardware de vanguardia.",
-    "icono": "🤖",
-    "color": "#06b6d4",
-    "tag": "I+D"
   }
 ]

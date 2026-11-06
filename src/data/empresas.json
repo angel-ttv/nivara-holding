@@ -17,22 +17,6 @@
     "url": "https://storyloop.com.mx"
   },
   {
-    "id": "papeleria-nivara",
-    "nombre": "Papelería Nivara",
-    "descripcion": "Papelería y útiles para estudiantes y negocios de la Riviera Maya.",
-    "icono": "✏️",
-    "color": "#f59e0b",
-    "tag": "Comercio"
-  },
-  {
-    "id": "nivara-repairs",
-    "nombre": "Nivara Repairs",
-    "descripcion": "Expertos en microsoldadura y reparación de hardware especializado.",
-    "icono": "🔧",
-    "color": "#22c55e",
-    "tag": "Servicios"
-  },
-  {
     "id": "nivara-marketing",
     "nombre": "Nivara Marketing",
     "descripcion": "Estrategias digitales y gestión de redes sociales para marcas modernas.",
@@ -47,14 +31,6 @@
     "icono": "🛒",
     "color": "#f97316",
     "tag": "E-commerce"
-  },
-  {
-    "id": "nivara-biotech",
-    "nombre": "Nivara Biotech",
-    "descripcion": "Innovación en biorreactores y soluciones biotecnológicas sostenibles.",
-    "icono": "🧬",
-    "color": "#10b981",
-    "tag": "I+D"
   },
   {
     "id": "nivara-technology",
